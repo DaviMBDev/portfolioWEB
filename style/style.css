@@ -190,12 +190,14 @@ ul li {
     border-radius: 6px;
     transition: background 0.5s ease, transform 0.5s ease;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
 }
 
+
 ul li img {
     max-width: 400px;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -204,6 +206,22 @@ ul li img {
 .portTxt {
     flex: 1;
     color: #ddd;
+}
+
+@media (max-width: 768px) {
+    ul li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    ul li img {
+        max-width: 100%;
+    }
+
+    .portTxt {
+        text-align: justify;
+    }
 }
 
 
@@ -245,4 +263,37 @@ ul li img {
 .devicon-mysql-original {
     font-size: 3.0rem;
     color: #4ea1ff;
+}
+
+.profileImg img {
+    max-height: 250px;
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.indexP {
+    flex: 1;
+    margin-right: 300px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.indexContent {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 30px;
+    
+}
+
+@media (max-width: 768px) {
+    .indexContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .indexP {
+        text-align: justify;
+    }
 }
